@@ -1,0 +1,20 @@
+/* src/Components/PurchaseOrder/UpdatePurchaseOrder.css */
+.purchase-order-form {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.purchase-order-form h2 {
+    text-align: center;
+}
+
+.item-container {
+    margin-bottom: 15px;
+}
+
+.item-container input {
+    margin-right: 10px;
+}

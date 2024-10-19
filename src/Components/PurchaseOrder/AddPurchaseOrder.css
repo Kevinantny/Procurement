@@ -1,0 +1,55 @@
+/* src/Components/PurchaseOrder/AddPurchaseOrder.css */
+.purchase-order-form {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+.purchase-order-form h2 {
+    text-align: center;
+    color: #333;
+}
+
+.purchase-order-form div {
+    margin-bottom: 15px;
+}
+
+.purchase-order-form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.purchase-order-form input {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.purchase-order-form button {
+    padding: 10px 15px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.purchase-order-form button:hover {
+    background-color: #0056b3;
+}
+
+.item-container {
+    margin-bottom: 20px;
+}
+
+.item-container input {
+    display: inline-block;
+    width: 200px;
+    margin-right: 10px;
+}

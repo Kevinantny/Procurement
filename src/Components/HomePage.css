@@ -1,0 +1,34 @@
+/* src/Components/HomePage.css */
+.home-page {
+    text-align: center;
+    padding: 20px;
+    background-color: #f4f4f4;
+}
+
+h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.nav-links {
+    margin: 20px 0;
+}
+
+.nav-links ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.nav-links li {
+    margin: 10px 0;
+}
+
+.nav-links a {
+    text-decoration: none;
+    font-size: 18px;
+    color: #007bff;
+}
+
+.nav-links a:hover {
+    color: #0056b3;
+}

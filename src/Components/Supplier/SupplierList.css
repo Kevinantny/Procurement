@@ -1,0 +1,57 @@
+/* src/Components/Supplier/SupplierList.css */
+.supplier-list {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f1f1f1;
+    border-radius: 5px;
+}
+
+.supplier-list h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.supplier-list table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+.supplier-list th, .supplier-list td {
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+.supplier-list th {
+    background-color: #007bff;
+    color: white;
+}
+
+.supplier-list tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.supplier-list tr:hover {
+    background-color: #f1f1f1;
+}
+
+.supplier-list .actions {
+    display: flex;
+    justify-content: space-around;
+}
+
+.supplier-list button {
+    padding: 5px 10px;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    background-color: #007bff;
+    cursor: pointer;
+}
+
+.supplier-list button:hover {
+    background-color: #0056b3;
+}
