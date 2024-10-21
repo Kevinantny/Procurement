@@ -1,55 +1,65 @@
 /* src/Components/PurchaseOrder/AddPurchaseOrder.css */
 .purchase-order-form {
-    max-width: 600px;
+    max-width: 700px;
     margin: 0 auto;
-    padding: 20px;
+    padding: 25px;
     border: 1px solid #ccc;
-    border-radius: 5px;
-    background-color: #f9f9f9;
+    border-radius: 8px;
+    background-color: #f1f1f1;
 }
 
 .purchase-order-form h2 {
     text-align: center;
     color: #333;
+    margin-bottom: 20px;
 }
 
-.purchase-order-form div {
+.purchase-order-form h3 {
+    color: #007bff;
+    margin-bottom: 10px;
+}
+
+.form-group {
     margin-bottom: 15px;
 }
 
-.purchase-order-form label {
+.form-group label {
     display: block;
     margin-bottom: 5px;
     font-weight: bold;
+    color: #555;
 }
 
-.purchase-order-form input {
+.form-group input, .form-group select {
     width: calc(100% - 20px);
     padding: 10px;
-    margin-bottom: 10px;
     border: 1px solid #ccc;
     border-radius: 4px;
+    font-size: 14px;
+    margin-bottom: 10px;
 }
 
-.purchase-order-form button {
-    padding: 10px 15px;
+.add-item-btn, .submit-btn {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    margin-top: 15px;
     background-color: #007bff;
     color: white;
     border: none;
-    border-radius: 4px;
+    border-radius: 5px;
     cursor: pointer;
+    font-size: 16px;
 }
 
-.purchase-order-form button:hover {
+.add-item-btn:hover, .submit-btn:hover {
     background-color: #0056b3;
 }
 
 .item-container {
-    margin-bottom: 20px;
-}
-
-.item-container input {
-    display: inline-block;
-    width: 200px;
-    margin-right: 10px;
+    margin-bottom: 25px;
+    padding: 15px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
 }
