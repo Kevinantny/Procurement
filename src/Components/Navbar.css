@@ -1,0 +1,30 @@
+/* src/Components/Navbar.css */
+.navbar {
+    background-color: #007bff; /* Bootstrap primary color */
+    padding: 10px;
+}
+
+.navbar ul {
+    list-style: none; /* Remove bullet points */
+    padding: 0; /* Remove default padding */
+    margin: 0; /* Remove default margin */
+    display: flex; /* Use flexbox for horizontal layout */
+    justify-content: space-around; /* Distribute space evenly */
+}
+
+.navbar li {
+    margin: 0 15px; /* Space between links */
+}
+
+.navbar a {
+    color: white; /* White text color */
+    text-decoration: none; /* Remove underline from links */
+    font-weight: bold; /* Bold text */
+    padding: 8px 15px; /* Padding around links */
+    border-radius: 4px; /* Rounded corners */
+    transition: background-color 0.3s; /* Smooth transition for hover effect */
+}
+
+.navbar a:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}

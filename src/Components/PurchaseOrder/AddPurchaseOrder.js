@@ -1,6 +1,7 @@
 // src/Components/PurchaseOrder/AddPurchaseOrder.js
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import * as XLSX from 'xlsx'; // Importing the xlsx library
 import './AddPurchaseOrder.css'; // Include the CSS file for styling
 
 const AddPurchaseOrder = () => {
@@ -58,6 +59,27 @@ const AddPurchaseOrder = () => {
             console.error('Error creating purchase order:', error.response ? error.response.data : error.message);
             alert('Error creating purchase order! ' + (error.response ? error.response.data.message : error.message));
         }
+    };
+
+    const exportToExcel = () => {
+        const ws = XLSX.utils.json_to_sheet(items.map(item => ({
+            item: item.item,
+            orderQty: item.orderQty,
+            unitPrice: item.unitPrice,
+            discount: item.discount,
+            stockUnit: item.stockUnit,
+            packingUnit: item.packingUnit,
+        })));
+
+        const wb = XLSX.utils.book_new();
+        XLSX.utils.book_append_sheet(wb, ws, 'Purchase Order');
+
+        // Save to file
+        XLSX.writeFile(wb, 'purchase_order.xlsx');
+    };
+
+    const handlePrint = () => {
+        window.print();
     };
 
     return (
@@ -163,6 +185,8 @@ const AddPurchaseOrder = () => {
             ))}
             <button type="button" className="add-item-btn" onClick={handleAddItem}>Add Another Item</button>
             <button type="submit" className="submit-btn">Submit Order</button>
+            <button type="button" className="export-btn" onClick={exportToExcel}>Export to Excel</button>
+            <button type="button" className="print-btn" onClick={handlePrint}>Print Purchase Order</button>
         </form>
     );
 };

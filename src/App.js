@@ -1,20 +1,19 @@
-// src/App.js
+
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Navbar from './Components/Navbar'; // Import the Navbar component
 import HomePage from './Components/HomePage';
 import AddSupplier from './Components/Supplier/AddSupplier';
 import SupplierList from './Components/Supplier/SupplierList';
 import AddPurchaseOrder from './Components/PurchaseOrder/AddPurchaseOrder';
 import PurchaseOrderList from './Components/PurchaseOrder/PurchaseOrderList';
-
-
 import AddItem from './Components/Item/AddItem';
 import ItemList from './Components/Item/ItemList';
-
 
 const App = () => {
     return (
         <Router>
+            <Navbar /> {/* Include the Navbar here */}
             <Routes>
                 <Route path="/" element={<HomePage />} />
                 <Route path="/suppliers/add" element={<AddSupplier />} />

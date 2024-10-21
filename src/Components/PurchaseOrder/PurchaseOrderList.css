@@ -1,20 +1,41 @@
-/* src/Components/PurchaseOrder/AddPurchaseOrder.css */
-.purchase-order-form {
-    max-width: 600px;
-    margin: 0 auto;
+/* src/Components/PurchaseOrder/PurchaseOrderList.css */
+
+.purchase-order-list {
+    max-width: 800px;
+    margin: 20px auto;
     padding: 20px;
     border: 1px solid #ccc;
-    border-radius: 5px;
+    border-radius: 8px;
+    background-color: #f9f9f9;
 }
 
-.purchase-order-form h2 {
+.purchase-order-list h1 {
     text-align: center;
+    color: #333;
 }
 
-.item-container {
-    margin-bottom: 15px;
+.purchase-order-list ul {
+    list-style: none;
+    padding: 0;
 }
 
-.item-container input {
-    margin-right: 10px;
+.purchase-order-list li {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+.purchase-order-list button {
+    margin-left: 10px;
+    padding: 5px 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.purchase-order-list button:hover {
+    background-color: #0056b3;
 }
