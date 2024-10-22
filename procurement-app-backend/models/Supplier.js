@@ -8,7 +8,7 @@ const supplierSchema = new mongoose.Schema({
     country: { type: String },
     mobileNo: { type: String },
     email: { type: String },
-    status: { type: String, default: 'Active' }, // Example default value
+    status: { type: String, default: 'Active' }, 
 });
 
 const Supplier = mongoose.model('Supplier', supplierSchema);

@@ -1,4 +1,4 @@
-// src/Components/PurchaseOrder/PurchaseOrderList.js
+
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import './PurchaseOrderList.css'; // Make sure this file exists and is styled accordingly

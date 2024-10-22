@@ -1,4 +1,4 @@
-// src/Components/Supplier/SupplierList.js
+
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import './SupplierList.css'; // Ensure this CSS file exists

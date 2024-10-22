@@ -1,4 +1,3 @@
-// src/Components/Supplier/AddSupplier.js
 import React, { useState } from 'react';
 import axios from 'axios';
 import './AddSupplier.css'; // Ensure this file exists and is styled accordingly
@@ -11,6 +10,16 @@ const AddSupplier = () => {
     const [mobileNo, setMobileNo] = useState('');
     const [email, setEmail] = useState('');
     const [status, setStatus] = useState('Active');
+
+    const resetForm = () => {
+        setSupplierName('');
+        setAddress('');
+        setTaxNo('');
+        setCountry('');
+        setMobileNo('');
+        setEmail('');
+        setStatus('Active');
+    };
 
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -25,9 +34,10 @@ const AddSupplier = () => {
                 status,
             });
             alert('Supplier added successfully!');
-            console.log("helllo", response.data); // Debug response
+            console.log('Response:', response.data); // Debug response
+            resetForm(); // Reset the form after successful submission
         } catch (error) {
-            console.error("Error adding supplier:", error); // Debug error
+            console.error('Error adding supplier:', error); // Debug error
             alert('Error adding supplier: ' + (error.response?.data.message || error.message));
         }
     };
@@ -37,27 +47,52 @@ const AddSupplier = () => {
             <h2>Add Supplier</h2>
             <div>
                 <label>Supplier Name</label>
-                <input type="text" value={supplierName} onChange={(e) => setSupplierName(e.target.value)} required />
+                <input
+                    type="text"
+                    value={supplierName}
+                    onChange={(e) => setSupplierName(e.target.value)}
+                    required
+                />
             </div>
             <div>
                 <label>Address</label>
-                <input type="text" value={address} onChange={(e) => setAddress(e.target.value)} />
+                <input
+                    type="text"
+                    value={address}
+                    onChange={(e) => setAddress(e.target.value)}
+                />
             </div>
             <div>
                 <label>Tax No</label>
-                <input type="text" value={taxNo} onChange={(e) => setTaxNo(e.target.value)} />
+                <input
+                    type="text"
+                    value={taxNo}
+                    onChange={(e) => setTaxNo(e.target.value)}
+                />
             </div>
             <div>
                 <label>Country</label>
-                <input type="text" value={country} onChange={(e) => setCountry(e.target.value)} />
+                <input
+                    type="text"
+                    value={country}
+                    onChange={(e) => setCountry(e.target.value)}
+                />
             </div>
             <div>
                 <label>Mobile No</label>
-                <input type="text" value={mobileNo} onChange={(e) => setMobileNo(e.target.value)} />
+                <input
+                    type="text"
+                    value={mobileNo}
+                    onChange={(e) => setMobileNo(e.target.value)}
+                />
             </div>
             <div>
                 <label>Email</label>
-                <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} />
+                <input
+                    type="email"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                />
             </div>
             <div>
                 <label>Status</label>
